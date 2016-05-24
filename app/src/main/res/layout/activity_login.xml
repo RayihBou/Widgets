@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="comrayihbou.github.mascotas.LoginActivity">
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        /////Refresh Layout/////
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/sfiMiIndicadorRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lista_Heigh">
+
+            <ListView
+                android:id="@+id/lstMiLista"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lista_Heigh">
+
+
+            </ListView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        /////Boton Raised/////
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boton Raised"
+            android:theme="@style/MiBotonRaised"
+            android:id="@+id/buttonRaised"
+            android:layout_alignBottom="@+id/fabBola"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/sfiMiIndicadorRefresh"
+            />
+
+        /////Floating Acction Buttom/////
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabBola"
+            android:layout_below="@+id/sfiMiIndicadorRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bola_icon"
+            >
+
+        </android.support.design.widget.FloatingActionButton>
+
+        //CardView - Cada tarjeta debe tener definido un layout.
+        //CarCorner: Modifica las esquinas del CardView
+        //ScaleType: Re-escala la imagen para que quede ubicada dentro del CardView
+
+        <android.support.v7.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/card_Medida"
+            android:layout_below="@+id/fabBola"
+            card_view:cardCornerRadius="4dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgImagen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/android"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTituloTarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tituloTarjeta"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/card_titulo"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDescripcionTarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descripcionTarjeta"
+                    android:layout_below="@+id/tvTituloTarjeta"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+

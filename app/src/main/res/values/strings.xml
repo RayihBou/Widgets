@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Widgets</string>
+    <string name="mensajeToast">Mensaje Toast</string>
+    <string name="mensajeSnack">Mensaje SnackBar</string>
+    <string name="textoAccion">Accion</string>
+    <string name="tituloTarjeta">Droid Android</string>
+    <string name="descripcionTarjeta">Droid que representa la marca Android</string>
+    <string-array name="mascotas">
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Pescado</item>
+        <item>Tortuga</item>
+        <item>Reptil</item>
+    </string-array>
+</resources>
